@@ -1,5 +1,9 @@
 const routes = [
     {
+        path: "*",
+        component: () => import('../Pages/NotFound404.vue'),
+    },
+    {
         path: '',
         component: () => import('../Pages/Home.vue'),
         name: 'home'
