@@ -6,4 +6,28 @@ const router = new VueRouter({
     routes
 });
 
+function isLoggedIn() {
+    return localStorage.getItem("auth");
+}
+
+router.beforeEach((to, from, next) => {
+    console.log(to);
+    if (to.matched.some(record => record.meta.authOnly)) {
+        if (!isLoggedIn()) {
+            next("/login");
+        } else {
+            next();
+        }
+    } else if (to.matched.some(record => record.meta.guestOnly)) {
+        if (isLoggedIn()) {
+            next("/about");
+        } else {
+            next();
+        }
+    } else {
+        next();
+    }
+});
+
+
 export default router;

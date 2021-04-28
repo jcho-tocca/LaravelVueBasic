@@ -5,9 +5,16 @@ const routes = [
         name: 'home'
     },
     {
-        path: 'about',
+        path: "/login",
+        name: "login",
+        component: () => import('../Pages/Login.vue'),
+        meta: { guestOnly: true }
+    },
+    {
+        path: "/about",
+        name: "about",
         component: () => import('../Pages/About.vue'),
-        name: 'about'
+        meta: { authOnly: true }
     }
 ];
 
