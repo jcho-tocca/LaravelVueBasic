@@ -53,7 +53,7 @@ __webpack_require__.r(__webpack_exports__);
           password: _this.password
         }).then(function (response) {
           console.log(response);
-          localStorage.setItem("auth", "ture");
+          localStorage.setItem("auth", "true");
 
           _this.$router.push("/about");
         })["catch"](function (error) {

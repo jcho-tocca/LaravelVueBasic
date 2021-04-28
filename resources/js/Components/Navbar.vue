@@ -1,14 +1,37 @@
 <template>
-  <nav class="navBar">
-    <ul class="navBar__link">
-      <li><router-link :to="{ name: 'home' }">Home</router-link></li>
-      <li><router-link :to="{ name: 'about' }">About</router-link> </li>
-    </ul>
-  </nav>
+    <div>
+        <v-app-bar color="blue darken-4" dark>
+            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+            <v-toolbar-title>LaravelVueBasic</v-toolbar-title>
+        </v-app-bar>
+
+        <v-navigation-drawer v-model="drawer" absolute temporary>
+            <v-list nav dense>
+                <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+                    <v-list-item route :to="{ name: 'home'}">
+                        <v-list-item-icon>
+                            <v-icon>mdi-home</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>Home</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item route :to="{ name: 'about'}">
+                        <v-list-item-icon>
+                            <v-icon>mdi-account</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>About</v-list-item-title>
+                    </v-list-item>
+                </v-list-item-group>
+            </v-list>
+        </v-navigation-drawer>
+    </div>
 </template>
 
 <script>
 export default {
-    name: 'navbar'
+    name: 'navbar',
+    data: () => ({
+      drawer: false,
+      group: null,
+    }),
 };
 </script>

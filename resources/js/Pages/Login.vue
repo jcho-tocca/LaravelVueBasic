@@ -41,7 +41,7 @@ export default {
                     })
                     .then(response => {
                         console.log(response);
-                        localStorage.setItem("auth", "ture");
+                        localStorage.setItem("auth", "true");
                         this.$router.push("/about");
                     })
                     .catch(error => {
