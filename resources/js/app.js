@@ -12,7 +12,9 @@ Vue.use(VueRouter)
 
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify(),
+    vuetify: new Vuetify({
+        iconfont: 'mdi', //追記
+    }),
     router,
     store,
     components: { App }
