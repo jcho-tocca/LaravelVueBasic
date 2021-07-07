@@ -1,11 +1,17 @@
 <template>
-  <div class="home">
+  <v-container>
     <img class="logo" width="100" src="logo.png" alt="">
     <h1>
       {{ count }}
     </h1>
-    <button class="btn" @click="$store.commit('INCREMENT')">INCREMENT</button>
-  </div>
+    <v-btn
+        color="primary"
+        type="submit"
+        @click="$store.commit('INCREMENT')"
+    >
+    カウント
+    </v-btn>
+  </v-container>
 </template>
 
 <script>

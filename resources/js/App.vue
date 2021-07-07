@@ -1,7 +1,7 @@
 <template>
 <!-- App.vue -->
     <v-app>
-        <Navbar />
+        <Navbar v-if="isLogined"/>
         <!-- <v-navigation-drawer app> -->
         <!-- -->
         <!-- </v-navigation-drawer> -->
@@ -11,10 +11,8 @@
         <!-- </v-app-bar> -->
         <!-- アプリケーションのコンポーネントに基づいてコンテンツのサイズを決定 -->
         <v-main><!-- アプリケーションに適切なgutterを提供します -->
-            <v-container fluid>
-                <!-- vue-routerを使用している場合 -->
-                <router-view></router-view>
-            </v-container>
+            <!-- vue-routerを使用している場合 -->
+            <router-view/>
         </v-main>
 
         <v-footer app>
@@ -25,10 +23,14 @@
 
 <script>
 // import './Styles/app.scss'
+import { mapGetters } from "vuex";
 export default {
     name: 'app',
     components: {
         Navbar: () => import('./Components/Navbar')
-    }
+    },
+    computed: {
+        ...mapGetters(['isLogined'])
+    },
 }
 </script>

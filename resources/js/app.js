@@ -10,6 +10,12 @@ import App from './App.vue'
 Vue.use(Vuetify);
 Vue.use(VueRouter)
 
+window.events = new Vue();
+
+window.flash = function(messageObj) {
+    window.events.$emit('flash', messageObj);
+}
+
 const app = new Vue({
     el: '#app',
     vuetify: new Vuetify({
