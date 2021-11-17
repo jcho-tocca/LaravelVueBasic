@@ -28,7 +28,7 @@ composer require laravel/ui
 #### 3. Vue スカフォールド
 基本的なスカフォールドを生成
 ```
-php artisan ui vue --auth
+php artisan ui vue
 ```
 #### 4. 依存パッケージインストール
 ```
