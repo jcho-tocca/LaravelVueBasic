@@ -3,17 +3,17 @@
 LaravelとVue.js構成でユーザー情報のCRUDを作成する
 
 ## 必須事項
-PHP >= 7.2.5
-Composer 2.x
-Node.js >=14.x
+PHP >= 7.2.5 
+Composer 2.x 
+Node.js >=14.x 
 
 ## 構成
-Laravel 8.35.1
-Vue 2.5.17
-Vuex 3.6.2
-vue-router 3.5.1
-Vuetify 2.4.11
-laravel/sanctum : 認証
+Laravel 8.35.1 
+Vue 2.5.17 
+Vuex 3.6.2 
+vue-router 3.5.1 
+Vuetify 2.4.11 
+laravel/sanctum : 認証 
 
 ※Vue.js バージョン2で構築する - バージョン3は現時点では対応する関連ライブラリなど少ないため。
 
