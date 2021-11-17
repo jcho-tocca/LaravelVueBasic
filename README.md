@@ -1,6 +1,6 @@
-# Laravel + Vue.jsでSPA(Single Page Application)を作る
+# Laravel + Vue.jsでSPAを作る
 ## 概要
-LaravelとVue.js構成でユーザー情報のCRUDを作成する
+LaravelとVue.jsで認証付きのCRUDを作成する
 
 ## 必須事項
 * PHP >= 7.2.5 
